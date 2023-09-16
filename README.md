@@ -1,16 +1,6 @@
 # musicapp
+Making Ui Pages for an music app will Complete it soon
 
-A new Flutter project.
+## Start page
+![Screenshot (12)](https://github.com/iusmansial/musicapp/assets/125605856/6dc800a2-b521-413f-a471-71fd22bf87af)
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
