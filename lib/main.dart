@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+
+import 'package:musicapp/signpage.dart';
 import 'package:musicapp/startpage.dart';
 
 void main() {
@@ -35,7 +37,10 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    height = MediaQuery.of(context).size.height;
+    width = MediaQuery.of(context).size.width;
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       body: Container(
           height: height,
           width: width,

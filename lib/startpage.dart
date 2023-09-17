@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:musicapp/signpage.dart';
 
 class Startpage extends StatefulWidget {
   const Startpage({super.key});
@@ -86,7 +87,13 @@ class _StartpageState extends State<Startpage> {
                   decoration:
                       BoxDecoration(borderRadius: BorderRadius.circular(25)),
                   child: ElevatedButton(
-                      onPressed: () {},
+                      onPressed: () {
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => Signin(),
+                            ));
+                      },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.deepPurple[500],
                         shape: RoundedRectangleBorder(
