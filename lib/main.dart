@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:musicapp/signuppage.dart';
 
-import 'package:musicapp/signpage.dart';
 import 'package:musicapp/startpage.dart';
 
 void main() {

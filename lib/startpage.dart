@@ -26,9 +26,9 @@ class _StartpageState extends State<Startpage> {
             Container(
               height: height * 0.7,
               width: width,
-              color: Colors.amber,
-              child: Image.network(
-                "https://media.istockphoto.com/id/535403859/photo/dancing-at-disco.jpg?s=612x612&w=0&k=20&c=mVZX9qAsgnOv8C0t9gR81ofJ0JG20Orc4Io9r4AKNQQ=",
+              // color: Colors.amber,
+              child: Image.asset(
+                'assets/Start.jpg',
                 fit: BoxFit.cover,
               ),
             ),
@@ -52,7 +52,7 @@ class _StartpageState extends State<Startpage> {
                       child: Text(
                     "MusicX",
                     style: TextStyle(
-                        fontSize: height * 0.06,
+                        fontSize: height * 0.05,
                         fontWeight: FontWeight.bold,
                         color: Colors.white),
                   )),

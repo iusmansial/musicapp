@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
-import 'package:musicapp/signuppage.dart';
 
-class Signin extends StatefulWidget {
-  const Signin({super.key});
+class Signup extends StatefulWidget {
+  const Signup({super.key});
 
   @override
-  State<Signin> createState() => _SigninState();
+  State<Signup> createState() => _SignupState();
 }
 
-class _SigninState extends State<Signin> {
+class _SignupState extends State<Signup> {
   var height, width;
   @override
   Widget build(BuildContext context) {
@@ -34,7 +33,7 @@ class _SigninState extends State<Signin> {
               // color: Colors.purple,
               child: Center(
                 child: Text(
-                  "Welcome Back!",
+                  "Hi!",
                   textAlign: TextAlign.center,
                   style: TextStyle(
                     fontSize: height * 0.04,
@@ -51,7 +50,7 @@ class _SigninState extends State<Signin> {
               child: Center(
                 child: Text(
                   textAlign: TextAlign.center,
-                  "Sign in to discover stream and enjoy millions of songs ",
+                  "Sign up to discover start listening to all your favorite artists",
                   style: TextStyle(
                       fontSize: height * 0.025,
                       color: Colors.white,
@@ -112,7 +111,59 @@ class _SigninState extends State<Signin> {
               ),
             ),
             SizedBox(
-              height: height * 0.03,
+              height: height * 0.02,
+            ),
+            Container(
+              height: height * 0.075,
+              width: width * 0.85,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(25),
+                  // color: Colors.deepPurple,
+                  border: Border.all(color: Colors.white)),
+              child: Center(
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 10),
+                  child: TextField(
+                    style:
+                        TextStyle(color: Colors.white, fontSize: height * 0.02),
+                    decoration: InputDecoration(
+                        border: InputBorder.none,
+                        hintText: 'Confirm password',
+                        hintStyle: TextStyle(
+                          color: Colors.grey,
+                        )),
+                  ),
+                ),
+              ),
+            ),
+            SizedBox(
+              height: height * 0.02,
+            ),
+            Container(
+              height: height * 0.075,
+              width: width * 0.85,
+              decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(25),
+                  // color: Colors.deepPurple,
+                  border: Border.all(color: Colors.white)),
+              child: Center(
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 10),
+                  child: TextField(
+                    style:
+                        TextStyle(color: Colors.white, fontSize: height * 0.02),
+                    decoration: InputDecoration(
+                        border: InputBorder.none,
+                        hintText: 'Email',
+                        hintStyle: TextStyle(
+                          color: Colors.grey,
+                        )),
+                  ),
+                ),
+              ),
+            ),
+            SizedBox(
+              height: height * 0.02,
             ),
             Container(
                 height: height * 0.075,
@@ -123,27 +174,11 @@ class _SigninState extends State<Signin> {
                 ),
                 child: Center(
                     child: Text(
-                  "Sign in",
+                  "Register",
                   style: TextStyle(
                       fontSize: height * 0.023,
                       color: Colors.white,
                       fontWeight: FontWeight.bold),
-                ))),
-            SizedBox(
-              height: height * 0.02,
-            ),
-            Container(
-                height: height * 0.05,
-                width: width * 0.9,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(25),
-                  // color: Colors.deepPurple,
-                ),
-                child: Center(
-                    child: Text(
-                  "Forgot your password?",
-                  style:
-                      TextStyle(fontSize: height * 0.02, color: Colors.white),
                 ))),
             SizedBox(
               height: height * 0.02,
@@ -206,46 +241,6 @@ class _SigninState extends State<Signin> {
             ),
             SizedBox(
               height: height * 0.01,
-            ),
-            Center(
-              child: Container(
-                  height: height * 0.05,
-                  width: width * 0.9,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(25),
-                    // color: Colors.deepPurple,
-                  ),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      SizedBox(
-                          child: Text(
-                        "Need an account?",
-                        style: TextStyle(
-                            fontSize: height * 0.02, color: Colors.white),
-                      )),
-                      SizedBox(
-                        width: 5,
-                      ),
-                      SizedBox(
-                          child: InkWell(
-                        onTap: () {
-                          Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => Signup(),
-                              ));
-                        },
-                        child: Text(
-                          "Register",
-                          style: TextStyle(
-                              fontSize: height * 0.02,
-                              color: Colors.white,
-                              fontWeight: FontWeight.bold),
-                        ),
-                      ))
-                    ],
-                  )),
             ),
           ],
         ),
