@@ -88,11 +88,8 @@ class _StartpageState extends State<Startpage> {
                       BoxDecoration(borderRadius: BorderRadius.circular(25)),
                   child: ElevatedButton(
                       onPressed: () {
-                        Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) => Signin(),
-                            ));
+                        Navigator.pop(context);
+                        Navigator.pushNamed(context, '/Signinpage');
                       },
                       style: ElevatedButton.styleFrom(
                         backgroundColor: Colors.deepPurple[500],

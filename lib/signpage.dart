@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/container.dart';
 import 'package:flutter/src/widgets/framework.dart';
+import 'package:musicapp/home.dart';
+
 import 'package:musicapp/signuppage.dart';
 
 class Signin extends StatefulWidget {
@@ -114,21 +116,27 @@ class _SigninState extends State<Signin> {
             SizedBox(
               height: height * 0.03,
             ),
-            Container(
-                height: height * 0.075,
-                width: width * 0.85,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(25),
-                  color: Colors.deepPurple,
-                ),
-                child: Center(
-                    child: Text(
-                  "Sign in",
-                  style: TextStyle(
-                      fontSize: height * 0.023,
-                      color: Colors.white,
-                      fontWeight: FontWeight.bold),
-                ))),
+            InkWell(
+              onTap: () {
+                Navigator.pop(context);
+                Navigator.pushNamed(context, '/Homepage');
+              },
+              child: Container(
+                  height: height * 0.075,
+                  width: width * 0.85,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(25),
+                    color: Colors.deepPurple,
+                  ),
+                  child: Center(
+                      child: Text(
+                    "Sign in",
+                    style: TextStyle(
+                        fontSize: height * 0.023,
+                        color: Colors.white,
+                        fontWeight: FontWeight.bold),
+                  ))),
+            ),
             SizedBox(
               height: height * 0.02,
             ),

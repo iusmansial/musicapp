@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+// import 'package:musicapp/dashboard.dart';
+import 'package:musicapp/home.dart';
+import 'package:musicapp/search.dart';
+import 'package:musicapp/signpage.dart';
 import 'package:musicapp/signuppage.dart';
 
 import 'package:musicapp/startpage.dart';
@@ -19,6 +23,11 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      routes: {
+        '/Homepage': (context) => Home(),
+        '/Searchpage': (context) => Searchpage(),
+        '/Signinpage': (context) => Signin(),
+      },
     );
   }
 }
@@ -39,13 +48,15 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     height = MediaQuery.of(context).size.height;
     width = MediaQuery.of(context).size.width;
+
     return Scaffold(
       resizeToAvoidBottomInset: false,
       body: Container(
-          height: height,
-          width: width,
-          color: Colors.white,
-          child: Startpage()),
+        height: height,
+        width: width,
+        color: Colors.white,
+        child: Startpage(),
+      ),
     );
   }
 }
